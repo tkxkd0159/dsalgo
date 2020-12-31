@@ -3,8 +3,8 @@
 - [Algorithms](#algorithms)
   - [Aysmtotic Notation](#aysmtotic-notation)
     - [Big O (Upper bound)](#big-o-upper-bound)
-    - [Big <img src="https://bit.ly/3n5q1we" align="center" border="0" alt="\Theta" width="17" height="15" /> (Tight bound)](#big-theta-tight-bound)
-    - [Big <img src="https://bit.ly/38SE8jp" align="center" border="0" alt="\Omega" width="17" height="15" /> (Lower bound)](#big-omega-lower-bound)
+    - [Big !theta (Tight bound)](#big--tight-bound)
+    - [Big !omega (Lower bound)](#big--lower-bound)
   - [Evaluation](#evaluation)
     - [Time Complexity](#time-complexity)
     - [Space Complexity](#space-complexity)
@@ -25,16 +25,16 @@
 n은 충분히 크다고 가정 (n이 작은 경우 뭘써도 빠름)  
 f값은 소요시간
 ### Big O (Upper bound)
-주어진 알고리즘이 아무리 나빠도 비교하는 함수<img src="http://www.sciweavers.org/tex2img.php?eq=%24%5Bc%20%5Ccdot%20g%28n%29%5D%24&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="$[c \cdot g(n)]$" width="74" height="19" />와 같거나 좋다.  
+주어진 알고리즘이 아무리 나빠도 비교하는 함수![cgn](img/math/cgn.png)와 같거나 좋다.  
 c는 임의의 양수  
 **O(g(n))**  
-<img src="http://www.sciweavers.org/tex2img.php?eq=%240%20%5Cle%20f%28n%29%20%5Cle%20c%20%5Ccdot%20g%28n%29%24&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="$0 \le f(n) \le c \cdot g(n)$" width="149" height="19" />
-### Big $\Theta$ (Tight bound)
+![bigo](img/math/bigO.png)
+### Big ![theta](img/math/theta.png) (Tight bound)
 주어진 알고리즘이 아무리 좋거나 나뻐도 비교하는 함수의 범위안에 있다.  
-<img src="http://www.sciweavers.org/tex2img.php?eq=%240%20%5Cle%20c_%7B1%7D%20%5Ccdot%20g%28n%29%20%5Cle%20%20f%28n%29%20%5Cle%20c_%7B2%7D%20%5Ccdot%20g%28n%29%24&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="$0 \le c_{1} \cdot g(n) \le  f(n) \le c_{2} \cdot g(n)$" width="149" height="19" />
-### Big $\Omega$ (Lower bound)
+![bigthetha](img/math/bigTheta.png)
+### Big ![omega](img/math/omega.png) (Lower bound)
 주어진 알고리즘이 아무리 좋아도 비교하는 함수와 같거나 나쁘다.  
-<img src="http://www.sciweavers.org/tex2img.php?eq=%240%20%5Cle%20c%20%5Ccdot%20g%28n%29%20%5Cle%20f%28n%29%24&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="$0 \le c \cdot g(n) \le f(n)$" width="149" height="19" />
+![bigomega](img/math/bigOmega.png)
 ## Evaluation
 ### Time Complexity
 인풋 크기에 비례하는 알고리즘의 실행 시간
