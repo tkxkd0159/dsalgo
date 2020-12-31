@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"markdown.extension.toc.omittedFromToc": {
+			 "README.md": ["# Data structures and Algorithms"]
+		}
+	}
+
+}

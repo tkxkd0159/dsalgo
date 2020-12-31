@@ -1,10 +1,9 @@
 # Data structures and Algorithms
-- [Data structures and Algorithms](#data-structures-and-algorithms)
 - [Algorithms](#algorithms)
   - [Aysmtotic Notation](#aysmtotic-notation)
     - [Big O (Upper bound)](#big-o-upper-bound)
-    - [Big !theta (Tight bound)](#big--tight-bound)
-    - [Big !omega (Lower bound)](#big--lower-bound)
+    - [Big theta (Tight bound)](#big--tight-bound)
+    - [Big omega (Lower bound)](#big--lower-bound)
   - [Evaluation](#evaluation)
     - [Time Complexity](#time-complexity)
     - [Space Complexity](#space-complexity)
