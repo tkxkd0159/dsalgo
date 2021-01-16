@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 # etc
-Algorithms/test.py
 .vscode/
+python/test.py

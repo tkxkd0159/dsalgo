@@ -1,15 +1,22 @@
 # Data structures and Algorithms
+**C++**, **python**  
+Greedy -> Search(Brute-force, BFS, DFS) -> DP -> Graph -> String  
+삼성역량테스트 B형, cordforce blue level 정도가 하한선
 - [Algorithms](#algorithms)
   - [Aysmtotic Notation](#aysmtotic-notation)
     - [Big O (Upper bound)](#big-o-upper-bound)
-    - [Big theta (Tight bound)](#big--tight-bound)
-    - [Big omega (Lower bound)](#big--lower-bound)
+    - [Big !theta (Tight bound)](#big--tight-bound)
+    - [Big !omega (Lower bound)](#big--lower-bound)
   - [Evaluation](#evaluation)
     - [Time Complexity](#time-complexity)
     - [Space Complexity](#space-complexity)
+  - [Greedy Algorithm](#greedy-algorithm)
   - [Search](#search)
+    - [Brute Force](#brute-force)
     - [Linear search](#linear-search)
     - [Binary search](#binary-search)
+  - [Divide and Conquer](#divide-and-conquer)
+  - [Dynamic Programming](#dynamic-programming)
   - [Graphs](#graphs)
     - [Minimum Spanning Tree](#minimum-spanning-tree)
     - [Dijkstra's Algorithm](#dijkstras-algorithm)
@@ -103,12 +110,25 @@ def largest_product(my_list):
     
     return max(products)
 ```
-
+## Greedy Algorithm
 ## Search
+### Brute Force
 ### Linear search
 ### Binary search
 sorted list에서만 사용 가능
 
+## Divide and Conquer
+Top-down 해결방식  
+큰 문제를 해결하기 위해 충분히 작아질 때까지 문제를 쪼개고 해결한 작은 문제를 가지고 바로 윗 단계의 문제를 해결하는 방식  
+문제를 쪼갤 때 부분 문제는 중복되지 않음 (DP와 달리 재활용 불가)  
+일반적으로 recursion으로 구현  
+
+## Dynamic Programming
+Bottom-up 해결방식  
+큰 문제를 작은 문제들로 나누어 부분적으로 해결한 후 여기서 파생된 값을 이용하여 전체 문제를 해결  
+문제를 쪼갤 때 부분 문제는 중복되어 **재활용**
 ## Graphs
+A set of Vertices and a sef of Edges(connects two vertices)
 ### Minimum Spanning Tree
 ### Dijkstra's Algorithm
+
