@@ -27,6 +27,8 @@ class Search:
         return None
 
 class Sort:
+    """The Class of Sorts
+    """
 
     def __init__(self, lists):
         self.lists = lists
@@ -63,6 +65,37 @@ class Sort:
             self.lists[cf_idx + 1] = key
         return self.lists
 
+    def merge_sort(self):
+        def merge(list1, list2):
+            merged_list = []
+
+            while len(list1) > 0 and len(list2) > 0:
+                if list1[0] < list2[0]:
+                    merged_list.append(list1[0])
+                    list1.pop(0)
+                else:
+                    merged_list.append(list2[0])
+                    list2.pop(0)
+
+            if len(list1) != 0:
+                merged_list += list1
+            elif len(list2) != 0:
+                merged_list += list2
+
+            return merged_list
+
+        if len(self.lists) < 2:
+            return self.lists
+
+        mid = len(self.lists) // 2
+        left_half = self.lists[:mid]
+        right_half = self.lists[mid:]
+
+        return merge(Sort(left_half).merge_sort(), Sort(right_half).merge_sort())
+
+
+
+
 
 
 
@@ -71,8 +104,10 @@ class Sort:
 
 def main():
     # unsorted_list = [element for element in input().split()]
-    sample = Sort([4,2,6,1,9,3])
+    sample = Sort([2, 5, 6, 7, 1, 2, 4, 7, 10, 11, 4, 15, 13, 1, 6, 4])
+    sample2 = Sort([28, 13, 9, 30, 1, 48, 5, 7, 15])
     print(sample.insertion_sort())
+    print(sample2.merge_sort())
 
 
 
