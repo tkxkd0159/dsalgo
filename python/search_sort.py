@@ -94,6 +94,36 @@ class Sort:
         return merge(Sort(left_half).merge_sort(), Sort(right_half).merge_sort())
 
 
+    def quick_sort(self, start=0, end=None):
+        def swap_elements(my_list, index1, index2):
+            temp = my_list[index1]
+            my_list[index1] = my_list[index2]
+            my_list[index2] = temp
+
+        def partition(my_list, start_idx, end_idx):
+            i = start_idx # scan index
+            b = start_idx # big group index
+            p = end_idx   # pivot index
+
+            while i < p:
+                if my_list[i] <= my_list[p]:
+                    swap_elements(my_list, i, b)
+                    b += 1
+                i += 1
+
+            swap_elements(my_list, b, p)
+            p = b
+            return p
+
+        if end == None:
+            end = len(self.lists) - 1
+
+        if end - start < 1:
+            return
+        else:
+            p = partition(self.lists, start, end)
+            self.quick_sort(start, p - 1)
+            self.quick_sort(p + 1, end)
 
 
 
@@ -106,9 +136,9 @@ def main():
     # unsorted_list = [element for element in input().split()]
     sample = Sort([2, 5, 6, 7, 1, 2, 4, 7, 10, 11, 4, 15, 13, 1, 6, 4])
     sample2 = Sort([28, 13, 9, 30, 1, 48, 5, 7, 15])
-    print(sample.insertion_sort())
+    sample.quick_sort()
+    print(sample.lists)
     print(sample2.merge_sort())
-
 
 
 
