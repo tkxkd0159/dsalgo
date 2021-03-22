@@ -20,6 +20,11 @@ Greedy -> Search(Brute-force, BFS, DFS) -> DP -> Graph -> String
   - [Graphs](#graphs)
     - [Minimum Spanning Tree](#minimum-spanning-tree)
     - [Dijkstra's Algorithm](#dijkstras-algorithm)
+  - [Sort](#sort)
+    - [Selection sort](#selection-sort)
+    - [Insertion sort](#insertion-sort)
+    - [Merge sort](#merge-sort)
+    - [Quick sort](#quick-sort)
 
 ![bigo](img/bigo.PNG)
 ![ds](img/ds_bigo.PNG)
@@ -132,3 +137,16 @@ A set of Vertices and a sef of Edges(connects two vertices)
 ### Minimum Spanning Tree
 ### Dijkstra's Algorithm
 
+## Sort
+### Selection sort
+### Insertion sort
+### Merge sort
+1. Divide  
+array를 반으로 나눈다. (재귀적으로 각 array가 하나 될 때까지)
+2. Conquer  
+나눈 array를 각각 정렬 (하나가 되면 그 자체가 정렬)
+3. Merge  
+정렬된 array들을 합침. 이 때 나눠진 array에서 낮은 값 순서대로 새로운 array에 넣음
+### Quick sort
+1. partition  
+우선 리스트를 나눈다. 이 떄 기준점(pivot)을 정한다. 이 pivot을 기준점으로 이보다 작은 값, 큰 값으로 나눔.
