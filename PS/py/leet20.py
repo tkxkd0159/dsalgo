@@ -43,3 +43,27 @@ class Solution:
             return True
         else:
             return False
+        
+        
+        
+    def isValid2(self, s: str) -> bool:
+        if len(s) % 2 != 0:
+            return False
+
+        lefts = "({["
+        set_dict = {")":"(", "]":"[", "}":"{"}
+
+        stack = []
+
+        for i in s:
+            if i in lefts:
+                stack.append(i)
+            elif i in set_dict:
+                if len(stack) != 0 and set_dict[i] == stack.pop():
+                    continue
+                else:
+                    return False
+            else:
+                return False
+
+        return len(stack) == 0
