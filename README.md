@@ -25,7 +25,8 @@ c는 임의의 양수
 ![bigomega](img/math/bigOmega.png)
 
 ### Time Complexity
-인풋 크기에 비례하는 알고리즘의 실행 시간
+인풋 크기에 비례하는 알고리즘의 실행 시간.  
+실행시간 초과날때는 항상 for문 중복으로 쓴거를 줄여볼 생각 해야함.
 ### Space Complexity
 인풋 크기에 비례하는 알고리즘이 사용하는 메모리 공간
 
