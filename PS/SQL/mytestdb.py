@@ -40,6 +40,10 @@ elif action == Option.CHECK_DATA:
     for idx, iata, city, country in cursor:
         print(idx, iata, city, country)
 
+    cursor.execute("SELECT city FROM airports")
+    for elem in cursor:
+        print(elem)
+
 
 cursor.close()
 cnx.close()
