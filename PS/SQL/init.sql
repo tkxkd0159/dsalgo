@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS mytestdb;
+
 DROP TABLE IF EXISTS airports;
 
 CREATE TABLE airports (

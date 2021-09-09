@@ -1,11 +1,13 @@
 from enum import Enum
+from time import sleep
 import mysql.connector as mysql
 
 class Option(Enum):
     CREATE_TABLE = 0
-    INSERT_DATA = 1
+    CHECK_DATA = 1
+    INSERT_DATA = 2
 
-action = Option.CREATE_TABLE
+action = Option.CHECK_DATA
 tables = {}
 
 config = {
@@ -20,7 +22,7 @@ cnx = mysql.connect(**config)
 cursor = cnx.cursor()
 
 if action == Option.CREATE_TABLE:
-    with open('init.sql') as f:
+    with open('./PS/SQL/init.sql') as f:
         try:
             query_iter = cursor.execute(f.read(), multi=True)
             # [query for query in query_iter]
@@ -33,11 +35,11 @@ if action == Option.CREATE_TABLE:
         else:
             print("Successfully done")
 
-
-    # check table data
+elif action == Option.CHECK_DATA:
     cursor.execute("SELECT * FROM airports")
     for idx, iata, city, country in cursor:
         print(idx, iata, city, country)
+
 
 cursor.close()
 cnx.close()
