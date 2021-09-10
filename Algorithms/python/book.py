@@ -157,4 +157,65 @@ class Implementations:
 
         return res
 
-print(Implementations.clock(5))
+    def knight_of_royal(pos): # c2 : 6, a1 : 2
+
+        conv_char = {"a":1, "b":2, "c":3, "d":4, "e":5, "f":6, "g":7, "h":8}
+        res = 0
+        x, y = conv_char[pos[0]], int(pos[1])
+        limit = [1, 8]
+        move_type = [(-2, -1), (-2, 1), (2, -1), (2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2)]
+
+        for dx, dy in move_type:
+            nx = x + dx
+            ny = y + dy
+            if nx < limit[0] or ny < limit[0] or nx > limit[1] or ny > limit[1]:
+                continue
+            else:
+                res += 1
+        return res
+
+
+    def grid_game(map_size, character, map):
+        # test case
+        # Implementations.grid_game([4, 4], [1, 1, 0], [[1,1,1,1],[1,0,0,1],[1,1,0,1],[1,1,1,1]])
+        y, x = character[0], character[1]
+        direction = character[2]
+        mymap = map
+        mymap[y][x] = 2
+
+        move_type = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+        cnt = 0
+        move_sig = False
+        dir_seq = [0, 3, 2, 1]
+        while True:
+            for i in range(1, 5):
+                nx = x + move_type[-i+direction][1]
+                ny = y + move_type[-i+direction][0]
+                idx = dir_seq.index(direction)
+
+                if mymap[ny][nx] != 1 and mymap[ny][nx] != 2:
+                    x = nx
+                    y = ny
+                    direction = dir_seq[(idx + i) % 4]
+                    move_sig = True
+                    mymap[ny][nx] = 2
+                    cnt += 1
+                    break
+
+            if not move_sig:
+                idx = dir_seq.index(direction)
+                print(type(idx))
+                nx = x + move_type[(idx + 2) % 4][1]
+                ny = y + move_type[(idx + 2) % 4][0]
+                if mymap[ny][nx] == 1:
+                    break
+                else:
+                    x = nx
+                    y = ny
+                    cnt += 1
+
+            move_sig = False
+
+        return cnt
+
+
