@@ -33,6 +33,18 @@ int main(){
     return 0;
 }
 ```
+## Essential headers
+```c++
+// #include <bits/stdc++.h>, 어느 헤더에 무슨 함수가 있는지 파악할 정도 되면 사용
+#include <iostream>
+#include <string>
+#include <map>
+#include <set>
+#include <stack>
+#include <vector>
+#include <functional>
+#include <algorithm>
+```
 ## macro
 ```c++
 #include <stdio.h>
