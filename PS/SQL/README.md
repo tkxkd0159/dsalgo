@@ -13,6 +13,14 @@ SELECT user() /* current user */
 SELECT user, host, db, command FROM information_schema.processlist; /* current logged user */
 
 ```
+## (1) Reset password
+```bash
+mysqld --defaults-file="C:\\ProgramData\\MySQL\\MySQL Server 8.0\\my.ini" --init-file=D:\\mysql-init.txt # as administrator
+```
+```sql
+# mysql-init.txt
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass';
+```
 # Create new user
 ```sql
 CREATE USER 'test'@'localhost' IDENTIFIED BY 'newpassword';
