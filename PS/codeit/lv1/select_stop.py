@@ -17,9 +17,6 @@ def select_stops(water_stops, capacity):
         if ((diff < capacity) and (next_diff > capacity)) or (diff == capacity):
             pick_stop.append(stop)
             start = stop
-        elif diff == capacity:
-            pick_stop.append(stop)
-            start = stop
 
     return pick_stop
 
