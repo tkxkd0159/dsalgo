@@ -1,4 +1,4 @@
-# nlogn
+#### Divide And Conquer - NlogN ####
 
 def sublist_max(profits, start, end):
     def max_cross_sum(profits, start, end):
@@ -25,7 +25,6 @@ def sublist_max(profits, start, end):
     return max(sublist_max(profits, start, mid), sublist_max(profits, mid+1, end), max_cross_sum(profits, start, end))
 
 
-#### Divide And Conquer ####
 
 
 def max_crossing_sum(profits, start, end):

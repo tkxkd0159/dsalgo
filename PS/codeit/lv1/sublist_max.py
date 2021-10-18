@@ -1,4 +1,4 @@
-#### Brute Force ####
+#### Brute Force N^2 ####
 
 
 def sublist_max(profits):
