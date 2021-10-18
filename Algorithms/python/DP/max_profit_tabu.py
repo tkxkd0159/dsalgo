@@ -12,7 +12,7 @@ def max_profit(price_list, count):
 
     return profits[count]
 
-def max_profit2(price_list, count):
+def max_profit_ans(price_list, count):
     profit_table = [0]
 
     for i in range(1, count + 1):
@@ -27,9 +27,10 @@ def max_profit2(price_list, count):
 
 
 if __name__ == "__main__":
+    # 개수별 가격, 2번 케이스의 경우 개수별 가격이 정해진 것 보다 판매할 개수가 더 많음
     print(max_profit([0, 200, 600, 900, 1200, 2000], 2))
     print(max_profit([0, 300, 600, 700, 1100, 1400], 8))
     print(max_profit([0, 100, 200, 400, 600, 900, 1200, 1300, 1500, 1800], 9))
-    print(max_profit2([0, 200, 600, 900, 1200, 2000], 2))
-    print(max_profit2([0, 300, 600, 700, 1100, 1400], 8))
-    print(max_profit2([0, 100, 200, 400, 600, 900, 1200, 1300, 1500, 1800], 9))
+    print(max_profit_ans([0, 200, 600, 900, 1200, 2000], 2))
+    print(max_profit_ans([0, 300, 600, 700, 1100, 1400], 8))
+    print(max_profit_ans([0, 100, 200, 400, 600, 900, 1200, 1300, 1500, 1800], 9))
