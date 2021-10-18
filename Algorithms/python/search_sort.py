@@ -48,7 +48,7 @@ class Sort:
             if min_num_idx != idx:
                 temp = self.lists[idx]
                 self.lists[idx] = min_num
-                self.lists[min_num_idx] = temp
+                self.lists[min_num_idx] = temp  # self.lists[idx], self.lists[min_num_idx] = self.lists[min_num_idx], self.lists[idx]
 
         return self.lists
 
