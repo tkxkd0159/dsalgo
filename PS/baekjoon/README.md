@@ -1,2 +1,0 @@
-# Backtracking
-`#15649`
