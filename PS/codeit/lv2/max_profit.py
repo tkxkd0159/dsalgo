@@ -25,7 +25,7 @@ def max_profit2(stock_list): # 투포인터 같은 풀이 (?)
     return max_profit_so_far
 
 
-# 테스트, 한 날 사서 이후 날에 팔 때 최대 수익 리턴
+# 테스트, 한 날 사서 이후 특정 날에 팔 때 최대 수익 리턴
 print(max_profit([7, 1, 5, 3, 6, 4]))
 print(max_profit([7, 6, 4, 3, 1]))
 print(max_profit([11, 13, 9, 13, 20, 14, 19, 12, 19, 13]))
