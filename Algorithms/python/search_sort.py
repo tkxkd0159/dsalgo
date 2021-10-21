@@ -26,6 +26,7 @@ class Search:
                 start_index = midpoint + 1
         return None
 
+
 class Sort:
     """The Class of Sorts
     """
@@ -33,14 +34,13 @@ class Sort:
     def __init__(self, lists):
         self.lists = lists
 
-
     def selection_sort(self):
 
         scan_range = len(self.lists)
         for idx in range(scan_range):
             min_num = self.lists[idx]
             min_num_idx = idx
-            for cf_idx in range(idx+1, scan_range):
+            for cf_idx in range(idx + 1, scan_range):
                 if self.lists[cf_idx] < min_num:
                     min_num = self.lists[cf_idx]
                     min_num_idx = cf_idx
@@ -48,7 +48,8 @@ class Sort:
             if min_num_idx != idx:
                 temp = self.lists[idx]
                 self.lists[idx] = min_num
-                self.lists[min_num_idx] = temp  # self.lists[idx], self.lists[min_num_idx] = self.lists[min_num_idx], self.lists[idx]
+                self.lists[
+                    min_num_idx] = temp  # self.lists[idx], self.lists[min_num_idx] = self.lists[min_num_idx], self.lists[idx]
 
         return self.lists
 
@@ -93,7 +94,6 @@ class Sort:
 
         return merge(Sort(left_half).merge_sort(), Sort(right_half).merge_sort())
 
-
     def quick_sort(self, start=0, end=None):
         def swap_elements(my_list, index1, index2):
             temp = my_list[index1]
@@ -101,9 +101,9 @@ class Sort:
             my_list[index2] = temp
 
         def partition(my_list, start_idx, end_idx):
-            i = start_idx # scan index
-            b = start_idx # big group index
-            p = end_idx   # pivot index
+            i = start_idx  # scan index
+            b = start_idx  # big group index
+            p = end_idx  # pivot index
 
             while i < p:
                 if my_list[i] <= my_list[p]:
@@ -126,12 +126,6 @@ class Sort:
             self.quick_sort(p + 1, end)
 
 
-
-
-
-
-
-
 def main():
     # unsorted_list = [element for element in input().split()]
     sample = Sort([2, 5, 6, 7, 1, 2, 4, 7, 10, 11, 4, 15, 13, 1, 6, 4])
@@ -141,7 +135,39 @@ def main():
     print(sample2.merge_sort())
 
 
+def top_down():
+    n = int(input())
+    arr = []
+    while True:
+        tmp = input()
+        if tmp == "":
+            break
+        else:
+            arr.append(tmp)
 
+    arr.sort(reverse=True)
+    for i in arr:
+        print(i, end=" ")
+    print("")
+
+
+def score_top_down():
+    n = int(input())
+    arr = []
+    for i in range(n):
+        name, score = input().split()
+        arr.append((name, int(score)))
+
+    arr.sort(key=lambda student: student[1])
+    for name, _ in arr:
+        print(f'{name}', end=" ")
+
+
+BOOK = True
 
 if __name__ == "__main__":
-    main()
+    if BOOK:
+        # top_down()
+        score_top_down()
+    else:
+        main()
