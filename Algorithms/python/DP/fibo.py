@@ -10,14 +10,40 @@ def fib_memo(n, cache):
 
     return cache[n]
 
+
 def fib(n):
     fib_cache = {}
 
     return fib_memo(n, fib_cache)
 
 
+N = 1000
+d = [0 for _ in range(N)]
+
+
+def fib_arr_topdown(n):
+    if n < 3:
+        return 1
+    if d[n] != 0:
+        return d[n]
+
+    d[n] = fib_arr_topdown(n - 1) + fib_arr_topdown((n - 2))
+
+    return d[n]
+
+
+d[1], d[2] = 1, 1
+
+
+def fib_arr_botup(n):
+    for i in range(3, n + 1):
+        d[i] = d[i - 1] + d[i - 2]
+    return d[n]
+
 
 if __name__ == "__main__":
     print(fib(10))
     print(fib(50))
     print(fib(100))
+    print(fib_arr_topdown(100))
+    print(fib_arr_botup(100))
