@@ -31,7 +31,25 @@ def floorWork(n):
     return tabu[n-1]
 
 
+def pickMoney(target_money, currency_ls):
+    tabu = [10001 for _ in range(target_money+1)]
+    tabu[0] = 0
+
+    for i in range(len(currency_ls)):
+        for j in range(currency_ls[i], target_money+1):
+            tabu[j] = min(tabu[j], tabu[j-currency_ls[i]] + 1)
+
+    if tabu[target_money] != 10001:
+        return tabu[target_money]
+    else:
+        return -1
+
+
+
+
 if __name__ == '__main__':
     print(make1(26))
     print(ant_warrior(4, [1, 3, 1, 5]))
     print(floorWork(3))
+    print(pickMoney(4, [3, 5, 7]))
+    print(pickMoney(15, [2, 3]))
