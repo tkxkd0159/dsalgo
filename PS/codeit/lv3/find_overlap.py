@@ -1,3 +1,6 @@
+# 제한 조건 : (N + 1)의 크기인 리스트에, 1부터 N까지의 임의의 자연수가 요소로 할당
+# O(nlog(n))
+
 def find_same_number(some_list):
     total_len = len(some_list)
     pointer = 0
