@@ -6,8 +6,20 @@
 
 # Programmers
 ### Hash
-kit : `1`, `2`
+kit : `1`, `2`, `3`, `4`
 ### Stack & Queue
+kit : `1`, `2`, `3`
+
+### Heap
+kit : `1`
+
+### Sort
+kit : `1`, `2`
+
+## Exhaustive Search
+kit : `1`
+
+### Greedy
 kit : `1`
 
 # Leetcode
