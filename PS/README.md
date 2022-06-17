@@ -1,7 +1,7 @@
 # Need to review
 
 `codility` : 6-4  
-`leecode` : 828
+`leetcode` : 828
 
 # Baekjoon
 ### Backtracking
