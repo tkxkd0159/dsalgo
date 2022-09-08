@@ -7,7 +7,7 @@
 ### Backtracking
 `#15649`
 
-# Programmers
+# Programmers (focus)
 ### Hash
 kit : `1`, `2`, `3`, `4`
 ### Stack & Queue
