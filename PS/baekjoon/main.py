@@ -1,3 +1,3 @@
 from base import *
-
-print(solve2525())
+from base import brute_force
+brute_force.solve4673()

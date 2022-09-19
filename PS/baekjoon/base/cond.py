@@ -1,3 +1,6 @@
+import sys
+
+
 def solve2525():
     h, m = map(int, input().split())
     work, = map(int, input().split())
@@ -48,3 +51,27 @@ def solve10950():
     for i in range(n):
         f, s = map(int, input().strip().split())
         print(f+s)
+
+
+def solve1110():
+    N = int(input().strip())
+    n = -1
+    rep = 0
+    while n != N:
+        if n == -1:
+            n = N
+        n = (n//10 + n % 10) % 10 + (n % 10)*10
+        rep += 1
+    print(rep)
+
+
+def solve3052():
+    b = [int(input()) % 42 for i in range(10)]
+    print(len(set(b)))
+
+
+def solve1546():
+    n, *scores = map(int, sys.stdin.buffer.read().split())
+    M = max(scores)
+    new_scores = [i/M*100 for i in scores]
+    print(sum(new_scores)/n)
