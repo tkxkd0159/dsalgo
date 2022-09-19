@@ -133,3 +133,4 @@ dmypy.json
 .vscode/
 python/test.py
 out
+.DS_Store
