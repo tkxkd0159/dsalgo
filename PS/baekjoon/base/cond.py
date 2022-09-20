@@ -75,3 +75,15 @@ def solve1546():
     M = max(scores)
     new_scores = [i/M*100 for i in scores]
     print(sum(new_scores)/n)
+
+
+def solve2920():
+    print({"12345678": "ascending", "87654321": "descending"}.get(
+        input()[::2], "mixed"))
+
+
+def solve10809():
+    s = input().strip()
+    a = "abcdefghijklmnopqrstuvwxyz"
+    for i in a:
+        print(s.find(i), end=' ')
