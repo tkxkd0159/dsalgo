@@ -87,3 +87,29 @@ def solve10809():
     a = "abcdefghijklmnopqrstuvwxyz"
     for i in a:
         print(s.find(i), end=' ')
+
+
+def solve2798():
+    read = sys.stdin.readline
+
+    N, M = map(int, read().split())
+    cards = sorted(list(map(int, read().split())), reverse=True)
+    gap = M
+    ans = 0
+    try:
+        for i in range(N-2):
+            for j in range(i+1, N-1):
+                for k in range(j+1, N):
+                    tmp = cards[i] + cards[j] + cards[k]
+                    if M - tmp == 0:
+                        ans = tmp
+                        raise
+                    if tmp <= M:
+                        if gap > (M - tmp):
+                            gap = M - tmp
+                            ans = tmp
+                        break
+    except:
+        pass
+    finally:
+        print(ans)

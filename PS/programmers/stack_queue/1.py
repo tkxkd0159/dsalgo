@@ -1,3 +1,17 @@
+class School:
+    def __init__(self) -> None:
+        pass
+
+    @staticmethod
+    def prob1():
+        # https://school.programmers.co.kr/learn/courses/30/lessons/12906?language=python3
+        answer = []
+        for e in arr:
+            if answer[-1:] != [e]:
+                answer.append(e)
+        return answer
+
+
 def solution(progresses, speeds):
     answer = []
     final = 100
@@ -17,10 +31,10 @@ def solution(progresses, speeds):
         else:
             answer[-1] += 1
 
-
     return answer
 
-def solution(progresses, speeds):
+
+def solution2(progresses, speeds):
     Q = []
     for p, s in zip(progresses, speeds):
         if len(Q) == 0 or Q[-1][0] < -((p-100) // s):
@@ -29,11 +43,12 @@ def solution(progresses, speeds):
             Q[-1][1] += 1
     return [q[1] for q in Q]
 
-def solution(progresses, speeds):
+
+def solution3(progresses, speeds):
     answer = []
     time = 0
     count = 0
-    while len(progresses)> 0:
+    while len(progresses) > 0:
         if (progresses[0] + time*speeds[0]) >= 100:
             progresses.pop(0)
             speeds.pop(0)

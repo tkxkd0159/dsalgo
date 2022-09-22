@@ -1,4 +1,7 @@
 from base import *
-from base import brute_force
 
-brute_force.solve1018()
+import sys
+read = sys.stdin.readline
+
+
+BruteForce.solve1018()
