@@ -1,3 +1,5 @@
+from copy import deepcopy
+from collections import deque
 from itertools import permutations, combinations, product, combinations_with_replacement
 from datetime import datetime
 from math import factorial
@@ -9,4 +11,5 @@ read = sys.stdin.readline
 
 # BruteForce.solve1018()
 
-print([[] for _ in range(3)])
+
+print((1, 2) + (3, 4))
