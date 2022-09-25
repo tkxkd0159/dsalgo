@@ -78,3 +78,28 @@ class BruteForce:
                 break
         if not isFind:
             print(0)
+
+    @staticmethod
+    def solve1436():
+        N = int(input())
+        cnt = 0
+        i = 0
+        while True:
+            snum = f'{i}666'
+            dupsix = 0
+            for j in range(len(snum)-3):
+                if snum[-4-j] == '6':
+                    dupsix += 1
+                else:
+                    break
+            cnt += (10**dupsix)
+            if cnt >= N:
+                if dupsix == 0:
+                    print(int(snum))
+                    break
+                else:
+                    cnt -= (10**dupsix)
+                    print(int(snum) - (int(snum) % (10**dupsix)) + (N-cnt-1))
+                    break
+            else:
+                i += 1

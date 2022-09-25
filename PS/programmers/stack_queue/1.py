@@ -3,7 +3,7 @@ class School:
         pass
 
     @staticmethod
-    def prob1():
+    def prob1(arr):
         # https://school.programmers.co.kr/learn/courses/30/lessons/12906?language=python3
         answer = []
         for e in arr:
