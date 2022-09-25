@@ -34,6 +34,10 @@
 
 ## 4) Kruskal algorithm
 
+## 5) Segment tree
+
+lazy propagation
+
 # Shortest Path
 
 ## 1) Dijkstra's algorithm
