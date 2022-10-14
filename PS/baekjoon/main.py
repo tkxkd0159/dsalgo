@@ -12,4 +12,5 @@ read = sys.stdin.readline
 # BruteForce.solve1018()
 
 
-print((1, 2) + (3, 4))
+from base import sort
+sort.Normal.solve11650()
