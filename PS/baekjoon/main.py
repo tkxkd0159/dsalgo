@@ -12,5 +12,5 @@ read = sys.stdin.readline
 # BruteForce.solve1018()
 
 
-from base import sort
-sort.Normal.solve11650()
+from base.easy import solve2164
+solve2164()
