@@ -48,3 +48,24 @@ def solve10866():
                 print(-1)
             else:
                 print(dq[-1])
+
+def solve9091():
+    N = int(read().rstrip())
+    def chkPS(strs):
+        dq = deque()
+
+        for s in strs:
+            if s == "(":
+                dq.append(s)
+            elif s == ")":
+                if len(dq) == 0:
+                    return "NO"
+                else:
+                    dq.pop()
+        if len(dq) == 0:
+            return "YES"
+        else:
+            return "NO"
+    
+    for _ in range(N):
+        print(chkPS(read().rstrip()))

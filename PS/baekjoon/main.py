@@ -12,5 +12,5 @@ read = sys.stdin.readline
 # BruteForce.solve1018()
 
 
-from base.easy import solve10866
-solve10866()
+from base.easy import solve9091
+solve9091()
