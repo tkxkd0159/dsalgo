@@ -23,3 +23,62 @@ def solve10814():
     users = sorted(users, key=lambda u: (u[1], u[0]))
     for i, age, name in users:
         print(f'{age} {name}')
+
+def solve10866():
+    N = int(read())
+    dq = deque()
+    for _ in range(N):
+        target = read().split()
+
+        if target[0] == "push_front":
+            dq.appendleft(int(target[1]))
+        elif target[0] == "push_back":
+            dq.append(int(target[1]))
+        elif target[0] == "pop_front":
+            if len(dq) == 0:
+                print(-1)
+            else:
+                print(dq.popleft())
+        elif target[0] == "pop_back":
+            if len(dq) == 0:
+                print(-1)
+            else:
+                print(dq.pop())
+        elif target[0] == "size":
+            print(len(dq))
+        elif target[0] == "empty":
+            if len(dq) == 0:
+                print(1)
+            else:
+                print(0)
+        elif target[0] == "front":
+            if len(dq) == 0:
+                print(-1)
+            else:
+                print(dq[0])
+        elif target[0] == "back":
+            if len(dq) == 0:
+                print(-1)
+            else:
+                print(dq[-1])
+
+def solve9091():
+    N = int(read().rstrip())
+    def chkPS(strs):
+        dq = deque()
+
+        for s in strs:
+            if s == "(":
+                dq.append(s)
+            elif s == ")":
+                if len(dq) == 0:
+                    return "NO"
+                else:
+                    dq.pop()
+        if len(dq) == 0:
+            return "YES"
+        else:
+            return "NO"
+    
+    for _ in range(N):
+        print(chkPS(read().rstrip()))
