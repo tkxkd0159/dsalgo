@@ -82,3 +82,11 @@ def solve9091():
     
     for _ in range(N):
         print(chkPS(read().rstrip()))
+
+def solve10816():
+    from collections import Counter
+    _ = read()
+    C = Counter(read().split())
+    _ = read()
+    targets = read().split()
+    print(' '.join(f'{C[t]}' if t in C else '0' for t in targets))
