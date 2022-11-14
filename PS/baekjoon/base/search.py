@@ -1,3 +1,6 @@
+import sys
+read = sys.stdin.readline
+
 class DFS:
     def __init__(self) -> None:
         pass
@@ -103,3 +106,33 @@ class BruteForce:
                     break
             else:
                 i += 1
+
+class BianrySearch:
+    def __init__(self) -> None:
+        pass
+
+    @staticmethod
+    def solve1920():
+        def bin(n, arr):
+            start = 0
+            end = len(arr) - 1
+
+            while start <= end:
+                mid = (start + end) // 2
+
+                if arr[mid] == n:
+                    return 1
+                elif arr[mid] < n :
+                    start = mid + 1
+                else:
+                    end = mid -1
+            return 0
+
+        N = int(read())
+        l = list()
+        for i in map(int, read().split()):
+            l.append(i)
+        l.sort()
+        M = int(read())
+        for i in map(int, read().split()):
+            print(bin(i, l))
