@@ -90,3 +90,29 @@ def solve10816():
     _ = read()
     targets = read().split()
     print(' '.join(f'{C[t]}' if t in C else '0' for t in targets))
+
+def solve10828():
+    N = int(read())
+    l = []
+    for _ in range(N):
+        tmp = read().split()
+        if len(tmp) == 2:
+            l.append(int(tmp[1]))
+        else:
+            if tmp[0] == "top":
+                if len(l) == 0:
+                    print(-1)
+                else:
+                    print(l[-1])
+            elif tmp[0] == "size":
+                print(len(l))
+            elif tmp[0] == "pop":
+                if len(l) == 0:
+                    print(-1)
+                else:
+                    print(l.pop())
+            elif tmp[0] == "empty":
+                if len(l) == 0:
+                    print(1)
+                else:
+                    print(0)
