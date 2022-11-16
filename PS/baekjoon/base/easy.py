@@ -116,3 +116,12 @@ def solve10828():
                     print(1)
                 else:
                     print(0)
+
+def solve2869():
+    a, b, v = map(int, read().split())
+    q = (v-a) // (a-b)
+    rem = (v-a) % (a-b)
+    if rem != 0:
+        print(q+2)
+    else:
+        print(q+1)
