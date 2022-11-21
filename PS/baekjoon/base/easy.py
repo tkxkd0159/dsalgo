@@ -125,3 +125,13 @@ def solve2869():
         print(q+2)
     else:
         print(q+1)
+
+def solve11651():
+    N = int(read())
+    dots = []
+    for _ in range(N):
+        dots.append(tuple(map(int, read().split())))
+    
+    sorted_dots = sorted(dots, key=lambda x: (x[1], x[0]))
+    for d in sorted_dots:
+        print(d[0], d[1])

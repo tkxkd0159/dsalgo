@@ -16,10 +16,11 @@ from base import *
 import sys
 read = sys.stdin.readline
 
-a, b, v = map(int, read().split())
-q = (v-a) // (a-b)
-rem = (v-a) % (a-b)
-if rem != 0:
-    print(q+2)
-else:
-    print(q+1)
+N = int(read())
+dots = []
+for _ in range(N):
+    dots.append(tuple(map(int, read().split())))
+
+sorted_dots = sorted(dots, key=lambda x: (x[1], x[0]))
+for d in sorted_dots:
+    print(d[0], d[1])
