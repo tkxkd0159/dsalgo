@@ -1,3 +1,16 @@
+# Greedy
+Only write for pure greedy algorithm
+
+# Graph
+[go to](./graph.md)
+
+# Sort
+## Topology sort
+# DP
+# Stack & Queue
+
+# Implementation
+Pure implementation wihtout specific algorithms
 # Need to review
 
 `codility` : 6-4  
