@@ -136,3 +136,28 @@ class BianrySearch:
         M = int(read())
         for i in map(int, read().split()):
             print(bin(i, l))
+    
+    @staticmethod
+    def solve1654():
+        K, N = map(int, read().split())
+        l = []
+        for _ in range(K):
+            l.append(int(read()))
+        
+        low = 1
+        high = max(l)
+        cached = 0
+        
+        while low <= high:
+            mid = (low + high) // 2
+            tot = 0
+            for elem in l:
+                tot += (elem // mid)
+            
+            if tot >= N:
+                cached = mid
+                low = mid + 1
+            else:
+                high = mid - 1
+        print(cached)
+        

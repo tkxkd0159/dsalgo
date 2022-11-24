@@ -16,11 +16,24 @@ from base import *
 import sys
 read = sys.stdin.readline
 
-N = int(read())
-dots = []
-for _ in range(N):
-    dots.append(tuple(map(int, read().split())))
+K, N = map(int, read().split())
+l = []
+for _ in range(K):
+    l.append(int(read()))
 
-sorted_dots = sorted(dots, key=lambda x: (x[1], x[0]))
-for d in sorted_dots:
-    print(d[0], d[1])
+low = 1
+high = max(l)
+cached = 0
+
+while low <= high:
+    mid = (low + high) // 2
+    tot = 0
+    for elem in l:
+        tot += (elem // mid)
+    
+    if tot >= N:
+        cached = mid
+        low = mid + 1
+    else:
+        high = mid - 1
+print(cached)
