@@ -5,6 +5,8 @@
 - [Spanning Tree](#spanning-tree)
 
 # BST
+* boj(1654)
+
 # DFS
 # BFS
 # Shortest Path

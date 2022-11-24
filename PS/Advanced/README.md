@@ -1,16 +1,26 @@
+# Brueteforce (Exhausitive Search)
+[go to](./brute.md)
+
 # Greedy
 Only write for pure greedy algorithm
+[go to](./greedy.md)
 
 # Graph
 [go to](./graph.md)
 
 # Sort
-## Topology sort
+[go to](./sort.md)
+
 # DP
+[go to](./dp.md)
+
 # Stack & Queue
+[go to](./ds.md)
 
 # Implementation
 Pure implementation wihtout specific algorithms
+[go to](./implementation.md)
+
 # Need to review
 
 `codility` : 6-4  
